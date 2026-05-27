@@ -12,10 +12,6 @@
 
 ![หน้า docs ของ pipe thaiDate](docs/screenshots/pipe-docs.png)
 
-> 📸 **สำหรับ dev:** รูปด้านบนยังไม่มี — กรุณารันแอป (`npm start`) เปิดหน้าเว็บ
-> แล้วแคปหน้าจอหน้า docs (เช่น pipe `thaiDate` พร้อม playground) บันทึกเป็น
-> `docs/screenshots/pipe-docs.png` เพื่อให้รูปในไฟล์นี้แสดงผล
-
 หน้า docs จะแสดงรายละเอียดของแต่ละ pipe — ทั้ง syntax, พารามิเตอร์, ตัวอย่างโค้ด,
 playground ที่ลองค่าได้จริง และหมายเหตุการใช้งาน เลื่อนดูทีละ pipe ได้ผ่าน pager ด้านล่าง
 
