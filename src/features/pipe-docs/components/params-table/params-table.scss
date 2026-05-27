@@ -1,0 +1,54 @@
+.params-grid {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 0;
+  margin-bottom: 3.5rem;
+  border-top: 1px solid var(--line);
+}
+.params-grid > div {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.88rem;
+}
+.p-head {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.p-name {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  font-weight: 500;
+  min-width: 120px;
+}
+.p-type {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--ink-2);
+  font-size: 0.82rem;
+  min-width: 130px;
+}
+.p-desc {
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.optional-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-left: 0.5rem;
+  padding: 0.1em 0.4em;
+  border: 1px solid var(--line-2);
+  border-radius: 2px;
+  white-space: nowrap;
+}
+@media (max-width: 576px) {
+  .params-grid {
+    grid-template-columns: 1fr;
+  }
+  .params-grid .p-head:not(:first-child) {
+    display: none;
+  }
+}

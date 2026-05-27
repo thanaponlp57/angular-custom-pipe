@@ -1,0 +1,15 @@
+<div class="eyebrow">
+  <span class="dot"></span>
+  <span>{{ category() }}</span>
+  <span class="sep"></span>
+  <span>{{ pad(index() + 1) }} / {{ pad(total()) }}</span>
+</div>
+
+<h1 class="pipe-name">
+  {{ name() }}
+  @if (titleAccent()) {
+    <em>{{ titleAccent() }}</em>
+  }
+</h1>
+
+<p class="lede">{{ lede() }}</p>

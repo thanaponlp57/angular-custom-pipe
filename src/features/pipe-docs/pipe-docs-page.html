@@ -1,0 +1,40 @@
+<app-top-bar version="v1.0" />
+
+<main class="page-wrap">
+  <app-pipe-header
+    [category]="doc().category"
+    [name]="doc().name"
+    [titleAccent]="doc().titleAccent"
+    [lede]="doc().lede"
+    [index]="activeIndex()"
+    [total]="total"
+  />
+
+  <app-syntax-bar [name]="doc().name" [params]="doc().params" />
+
+  @if (doc().params.length) {
+    <app-section-label>พารามิเตอร์</app-section-label>
+    <app-params-table [params]="doc().params" />
+  }
+
+  <app-section-label>ทดลองใช้งาน</app-section-label>
+  <app-pipe-playground [doc]="doc()" />
+
+  <app-section-label>การใช้งานใน Template</app-section-label>
+  <app-code-block
+    [code]="doc().code.content"
+    [filename]="doc().code.filename"
+    [language]="doc().code.language"
+  />
+
+  <app-section-label>หมายเหตุ</app-section-label>
+  <app-notes-block [notes]="doc().notes" />
+
+  <app-docs-pager
+    [currentIndex]="activeIndex()"
+    [total]="total"
+    [prevLabel]="prevLabel()"
+    [nextLabel]="nextLabel()"
+    (navigate)="goTo($event)"
+  />
+</main>

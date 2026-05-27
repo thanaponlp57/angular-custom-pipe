@@ -1,0 +1,31 @@
+<div class="pg-field">
+  <div class="pg-label">
+    <span class="pg-key">{{ field().label }}</span>
+  </div>
+
+  @switch (field().kind) {
+    @case ('text') {
+      <input
+        type="text"
+        class="pg-input"
+        [value]="value()"
+        [placeholder]="field().placeholder ?? ''"
+        (input)="onInput($event)"
+      />
+    }
+    @case ('chips') {
+      <div class="pg-select-row">
+        @for (opt of field().options ?? []; track opt.value) {
+          <button
+            type="button"
+            class="pg-chip"
+            [class.active]="opt.value === value()"
+            (click)="selectChip(opt.value)"
+          >
+            {{ opt.label ?? opt.value }}
+          </button>
+        }
+      </div>
+    }
+  }
+</div>

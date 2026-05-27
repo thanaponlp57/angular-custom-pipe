@@ -1,0 +1,36 @@
+.playground {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.playground::before {
+  content: 'ลองเล่น';
+  position: absolute;
+  top: 0.65rem;
+  left: 0.85rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  z-index: 2;
+}
+.playground-body {
+  padding: 3rem 2.25rem 2rem;
+}
+.playground-caption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+@media (max-width: 576px) {
+  .playground-body {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+}

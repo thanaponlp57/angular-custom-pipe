@@ -1,0 +1,51 @@
+:host {
+  display: block;
+}
+.pg-expression {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  padding: 0 2.25rem 1rem;
+  word-break: break-word;
+}
+.pg-output {
+  border-top: 1px solid var(--line);
+  background: var(--paper-2);
+  padding: 1.5rem 2.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.pg-output-arrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.pg-output-value {
+  flex: 1;
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  word-break: break-word;
+}
+.pg-output-value.is-empty {
+  color: #c4c0b7;
+  font-size: 1rem;
+}
+@media (max-width: 576px) {
+  .pg-expression {
+    padding: 0 1.5rem 1rem;
+  }
+  .pg-output {
+    padding: 1.25rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

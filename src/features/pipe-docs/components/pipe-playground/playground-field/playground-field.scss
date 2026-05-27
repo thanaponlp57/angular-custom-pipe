@@ -1,0 +1,63 @@
+:host {
+  display: block;
+}
+.pg-field {
+  margin-bottom: 1.5rem;
+}
+.pg-label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.pg-label .pg-key {
+  color: var(--ink);
+}
+.pg-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--line-2);
+  background: transparent;
+  padding: 0.65rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+.pg-input:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+.pg-input::placeholder {
+  color: #c4c0b7;
+}
+.pg-select-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.pg-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--line-2);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.pg-chip:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.pg-chip.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}

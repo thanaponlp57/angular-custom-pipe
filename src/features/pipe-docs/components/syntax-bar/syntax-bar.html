@@ -1,0 +1,14 @@
+<div class="syntax">
+  <span class="syntax-label">SYNTAX</span>
+  <div class="syntax-line">
+    <span class="braces">&#123;&#123;</span>
+    <span class="value">value</span>
+    <span class="op">|</span>
+    <span class="pipe-name">{{ name() }}</span>
+    @for (param of params(); track param.name) {
+      <span class="op">:</span>
+      <span class="param" [class.optional]="param.optional">{{ param.name }}</span>
+    }
+    <span class="braces">&#125;&#125;</span>
+  </div>
+</div>

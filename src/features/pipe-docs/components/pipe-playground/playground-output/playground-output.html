@@ -1,0 +1,12 @@
+<div class="pg-expression">
+  <span>{{ expression() }}</span>
+</div>
+
+<div class="pg-output">
+  <span class="pg-output-arrow">ผลลัพธ์ &rarr;</span>
+  @if (output()) {
+    <span class="pg-output-value">{{ output() }}</span>
+  } @else {
+    <span class="pg-output-value is-empty">ไม่มีผลลัพธ์ — input ไม่ถูกต้อง</span>
+  }
+</div>

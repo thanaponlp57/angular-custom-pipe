@@ -1,0 +1,16 @@
+<div class="params-grid">
+  <div class="p-head">ชื่อ</div>
+  <div class="p-head">ชนิด</div>
+  <div class="p-head">คำอธิบาย</div>
+
+  @for (param of params(); track param.name) {
+    <div class="p-name">{{ param.name }}</div>
+    <div class="p-type">{{ param.type }}</div>
+    <div class="p-desc">
+      {{ param.description }}
+      @if (param.optional) {
+        <span class="optional-tag">ไม่บังคับ</span>
+      }
+    </div>
+  }
+</div>

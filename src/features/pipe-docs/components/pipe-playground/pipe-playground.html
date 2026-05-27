@@ -1,0 +1,15 @@
+<div class="playground">
+  <div class="playground-body">
+    @for (field of doc().playground; track field.key) {
+      <app-playground-field
+        [field]="field"
+        [value]="state()[field.key]"
+        (valueChange)="setValue(field.key, $event)"
+      />
+    }
+  </div>
+
+  <app-playground-output [expression]="expression()" [output]="output()" />
+</div>
+
+<p class="playground-caption">พรีวิวสด — แก้ค่าในช่องด้านบนได้เลย</p>
